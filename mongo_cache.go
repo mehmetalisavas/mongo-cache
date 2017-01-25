@@ -1,6 +1,7 @@
 package cache
 
 import (
+	"errors"
 	"fmt"
 	"sync"
 	"time"
@@ -13,6 +14,10 @@ const (
 	defaultCollectionName = "jCache"
 	defaultGCInterval     = time.Minute
 	indexExpireAt         = "expireAt"
+)
+
+var (
+	ErrNotFound = errors.New("not found")
 )
 
 // MongoCache holds the cache values that will be stored in mongoDB
