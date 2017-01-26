@@ -16,7 +16,7 @@ After creating constructor, you can set necessary field with config options (you
 ## Usage
 
 ```go
-session = initMongo() // you need to create a session in mongoDB
+session = initMongo() // you need to create a session for mongoDB
 
 // Init MongoCache with defaults
 NewMongoCacheWithTTL(session)
