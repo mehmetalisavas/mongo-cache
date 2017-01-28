@@ -30,10 +30,10 @@ NewMongoCacheWithTTL(session, SetTTL(duration/2), SetGCInterval(duration), Start
 
 Granted Config options:
 - func MustEnsureIndexExpireAt() Option
-- func StartGC() Option
-- func SetTTL(duration time.Duration) Option
-- func SetGCInterval(duration time.Duration) Option
-- func SetCollectionName(collName string) Option
+- func StartGC() Option // starts the garbage collector
+- func SetTTL(duration time.Duration) Option // sets the ttl for cache
+- func SetGCInterval(duration time.Duration) Option 
+- func SetCollectionName(collName string) Option // sets the specific collection name for mongo session
 
 ```
 
