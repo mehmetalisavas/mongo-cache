@@ -42,6 +42,7 @@ Granted Config options:
 ```go
 var (
 	// session is the default session with default options
+	// initMongo function is just used for testing.
 	session = initMongo()
 )
 
