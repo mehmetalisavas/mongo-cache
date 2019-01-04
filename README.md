@@ -28,7 +28,7 @@ cacheTTL := NewMongoCacheWithTTL(session, SetTTL(duration))
 // Also you can pass multiple config options while initing MongoCache
 NewMongoCacheWithTTL(session, SetTTL(duration/2), SetGCInterval(duration), StartGC())
 
-Granted Config options:
+Granted Config options are listed below:
 - func MustEnsureIndexExpireAt() Option
 - func StartGC() Option // starts the garbage collector
 - func SetTTL(duration time.Duration) Option // sets the ttl for cache
