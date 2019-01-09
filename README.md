@@ -43,6 +43,7 @@ Granted Config options are listed below:
 var (
 	// session is the default session with default options
 	// initMongo function is just used for testing.
+	// (you should initialize your own mongo db)
 	session = initMongo()
 )
 
