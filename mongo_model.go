@@ -14,7 +14,7 @@ type Document struct {
 	ExpireAt time.Time   `bson:"expireAt" json:"expireAt"`
 }
 
-// getKey fetches the key with its key
+// get fetches the key with its given key input 
 func (m *MongoCache) get(key string) (*Document, error) {
 	keyValue := new(Document)
 
@@ -49,7 +49,7 @@ func (m *MongoCache) set(key string, duration time.Duration, value interface{}) 
 	return m.run(m.CollectionName, query)
 }
 
-// deleteKey removes the key-value from mongoDB
+// delete removes the key-value from mongoDB
 func (m *MongoCache) delete(key string) error {
 	query := func(c *mgo.Collection) error {
 		err := c.RemoveId(key)
