@@ -56,7 +56,7 @@ value := "mongoDB"
 if err := mgoCache.Set(key, value); err != nil {
     return err
 }
-data, err := mgoCache.Get(key) // data : "mongoDB"
+data, err := mgoCache.Get(key) // "key" : "value"
 if err != nil {
     return err
 }
