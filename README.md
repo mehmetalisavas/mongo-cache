@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/mehmetalisavas/mongo-cache.svg?branch=master)](https://travis-ci.org/mehmetalisavas/mongo-cache)
 
-## Cache using mongoDB for Go
+## Cache using MongoDB for Go
 
 ## Install
 
@@ -40,12 +40,12 @@ Granted Config options are listed below:
 
 ## Examples
 ```go
-var (
-	// session is the default session with default options
-	// initMongo function is just used for testing.
-	// (you should initialize your own mongo db)
-	session = initMongo()
-)
+
+// session is the default session with default options
+// initMongo function is just used for testing.
+// (you should initialize your own mongo db)
+var session = initMongo()
+
 
 mgoCache := NewMongoCacheWithTTL(session)
 defer mgoCache.StopGC()
